@@ -1,0 +1,164 @@
+
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'layout';
+
+
+
+
+/*---------------------------------------------------STYLE----------------------------------------*/
+#page {
+	
+	background-color: $backgroundColor;
+	color: $textColor;
+	font-family: $font;
+	
+	header {
+	
+		padding: $paddingS 0;
+		
+	h1 {
+		font-size: $fontSizeL;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	ul {
+		@include linkState($textColorAccent, $textColor);
+		text-align: center;
+		@media all and (max-width: $screenS + 1){
+			@include linkState($textColor, $backgroundColor);
+		}
+		li {
+			color: $textColorAccent;
+			
+			input {
+				background-color: $backgroundColor;
+				border: 1px solid $textColorAccent;
+				color: $textColor;
+			}
+		
+		}		
+	}
+	
+	}
+}
+
+
+nav {
+	
+	background-color: $secondaryColor;
+	padding: $paddingM 0;
+	text-align: center;
+	@include linkState($textColor, $textColorAccent);
+	
+	
+	
+	ul{
+		
+		li{
+			font-size: $fontSizeS;
+			font-weight: medium;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+#radio {
+	padding: $paddingM 0;
+	background-image: url("../images/bg-black.jpg");
+	
+	h1 {
+		font-size: $fontSizeM;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+	
+	p {
+		padding: $paddingS 0;
+		font-size: $fontSizeS;
+		text-align: center;
+	}
+	
+	#radio-search {
+		line-height: 30px;
+	}
+
+}
+
+.btn{
+	padding: $paddingS $paddingM;
+	color: $textColor;
+	border: 1px solid $textColor ;
+	background: none;
+	text-decoration: none;
+	@include borderRadius(15px);
+}
+
+.btn:hover {
+	background: $secondaryColor;
+	text-decoration: none;
+}
+
+
+#carosel{
+	background-image: url("../images/bg-red.jpg");
+	text-align: center;
+		
+	h1 {
+		padding: 4%;
+		font-size: 1.5em;
+	}
+	
+	img{
+		@include borderRadius(50%);
+	}
+	
+	p {
+		padding: $paddingS $paddingL;
+	}
+}
+
+#mail {
+	background-image: url('images/bg-black.jpg');
+	
+	form {
+		div{
+			
+			border-bottom: 1px solid white;
+		
+			#div-opinion {
+				border-bottom: 1px solid white;
+			}
+			#opinion{
+					background:none;
+					border: none;
+					color: #ffffff;
+				}
+			
+				#opinion:focus{
+					outline: none;
+				}
+			p {
+			padding: $paddingS 0;
+			@include transition(padding, 1000ms);
+			@include transition(color, 100ms);
+			}
+			p:hover{
+			padding: 0 0 2*$paddingS 0;
+			color: $textColorAccent;
+			}
+			input{
+				border: none;
+				background: none;
+				color: white;
+			}
+			input:focus {
+				outline: none;
+			}
+		}
+	}
+	
+}

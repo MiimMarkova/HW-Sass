@@ -1,0 +1,323 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*---------------------------------------------MIXINS-----------------------------------------------*/
+/*-----------------------------------------VARIABLES-----------------------------------------------*/
+/*--------------------------------------------LAYOUT-----------------------------------------------*/
+#page {
+  width: 1170px;
+  margin: auto; }
+  @media all and (max-width: 991px) {
+    #page {
+      width: 100%; } }
+  #page header {
+    width: 100%;
+    box-sizing: border-box; }
+    #page header h1 {
+      display: inline-block;
+      width: 25%; }
+      @media all and (max-width: 991px) {
+        #page header h1 {
+          display: block;
+          margin: auto;
+          width: 50%; } }
+    #page header ul {
+      display: inline-block;
+      width: 72%; }
+      @media all and (max-width: 991px) {
+        #page header ul {
+          width: 100%; } }
+      @media all and (max-width: 321px) {
+        #page header ul {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          width: 10px;
+          overflow: hidden;
+          background-color: #606060; }
+          #page header ul:hover {
+            width: 80%; } }
+      #page header ul li {
+        margin: 20px;
+        display: inline; }
+        @media all and (max-width: 641px) {
+          #page header ul li {
+            display: block; } }
+
+nav {
+  width: 100%; }
+  nav ul li {
+    display: inline;
+    margin: 0 20px; }
+    @media all and (max-width: 991px) {
+      nav ul li {
+        display: block;
+        padding: 0.75%; } }
+
+#gallery {
+  width: 100%; }
+  #gallery img {
+    display: block;
+    width: 100%; }
+
+#radio {
+  width: 100%; }
+  #radio #radio-search {
+    column-count: 3;
+    margin: 3% 30%; }
+    @media all and (max-width: 991px) {
+      #radio #radio-search {
+        column-count: 2; } }
+
+.btn {
+  width: 200px;
+  display: block;
+  margin: 3% auto; }
+
+#movie-gallery {
+  display: inline-block; }
+  #movie-gallery .movies {
+    float: left;
+    margin: 2.5%;
+    width: 200px;
+    height: 300px;
+    overflow: hidden; }
+    @media all and (max-width: 991px) {
+      #movie-gallery .movies {
+        width: 40%;
+        height: 60%;
+        margin: 5%; } }
+    #movie-gallery .movies img {
+      width: 100%;
+      height: auto;
+      -webkit-transition: width 1000ms;
+      -moz-transition: width 1000ms;
+      -o-transition: width 1000ms;
+      transition: width 1000ms; }
+    #movie-gallery .movies img:hover {
+      width: 105%; }
+
+#carosel {
+  width: 100%; }
+  #carosel img {
+    display: block;
+    width: 50%;
+    margin: auto; }
+
+#mail {
+  width: 100%;
+  display: inline-block; }
+  #mail form {
+    width: 90%;
+    font-weight: light; }
+    #mail form div {
+      width: 40%;
+      float: left;
+      margin: 5%; }
+      @media all and (max-width: 641px) {
+        #mail form div {
+          width: 100%; } }
+    #mail form #div-opinion {
+      width: 90%; }
+      #mail form #div-opinion textarea {
+        width: 85%;
+        float: right; }
+    #mail form input {
+      width: 70%; }
+
+#map {
+  width: 100%;
+  height: 500px;
+  overflow: hidden; }
+  #map iframe {
+    height: 100%;
+    width: 100%; }
+
+/*---------------------------------------------------STYLE----------------------------------------*/
+#page {
+  background-color: #1f2324;
+  color: #ffffff;
+  font-family: Helvetika, Arial, serif; }
+  #page header {
+    padding: 1.5% 0; }
+    #page header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center; }
+    #page header ul {
+      text-align: center; }
+      #page header ul a:link {
+        color: #606060;
+        text-decoration: none; }
+      #page header ul a:visited {
+        color: #606060;
+        text-decoration: none; }
+      #page header ul a:hover {
+        color: #ffffff;
+        text-decoration: none; }
+      #page header ul a:active {
+        color: #ffffff;
+        text-decoration: none; }
+      @media all and (max-width: 321px) {
+        #page header ul a:link {
+          color: #ffffff;
+          text-decoration: none; }
+        #page header ul a:visited {
+          color: #ffffff;
+          text-decoration: none; }
+        #page header ul a:hover {
+          color: #1f2324;
+          text-decoration: none; }
+        #page header ul a:active {
+          color: #1f2324;
+          text-decoration: none; } }
+      #page header ul li {
+        color: #606060; }
+        #page header ul li input {
+          background-color: #1f2324;
+          border: 1px solid #606060;
+          color: #ffffff; }
+
+nav {
+  background-color: #f73b4c;
+  padding: 3% 0;
+  text-align: center; }
+  nav a:link {
+    color: #ffffff;
+    text-decoration: none; }
+  nav a:visited {
+    color: #ffffff;
+    text-decoration: none; }
+  nav a:hover {
+    color: #606060;
+    text-decoration: none; }
+  nav a:active {
+    color: #606060;
+    text-decoration: none; }
+  nav ul li {
+    font-size: 1.2em;
+    font-weight: medium;
+    letter-spacing: 1px; }
+
+#radio {
+  padding: 3% 0;
+  background-image: url("../images/bg-black.jpg"); }
+  #radio h1 {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center; }
+  #radio p {
+    padding: 1.5% 0;
+    font-size: 1.2em;
+    text-align: center; }
+  #radio #radio-search {
+    line-height: 30px; }
+
+.btn {
+  padding: 1.5% 3%;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background: none;
+  text-decoration: none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px; }
+
+.btn:hover {
+  background: #f73b4c;
+  text-decoration: none; }
+
+#carosel {
+  background-image: url("../images/bg-red.jpg");
+  text-align: center; }
+  #carosel h1 {
+    padding: 4%;
+    font-size: 1.5em; }
+  #carosel img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+  #carosel p {
+    padding: 1.5% 15%; }
+
+#mail {
+  background-image: url("images/bg-black.jpg"); }
+  #mail form div {
+    border-bottom: 1px solid white; }
+    #mail form div #div-opinion {
+      border-bottom: 1px solid white; }
+    #mail form div #opinion {
+      background: none;
+      border: none;
+      color: #ffffff; }
+    #mail form div #opinion:focus {
+      outline: none; }
+    #mail form div p {
+      padding: 1.5% 0;
+      -webkit-transition: padding 1000ms;
+      -moz-transition: padding 1000ms;
+      -o-transition: padding 1000ms;
+      transition: padding 1000ms;
+      -webkit-transition: color 100ms;
+      -moz-transition: color 100ms;
+      -o-transition: color 100ms;
+      transition: color 100ms; }
+    #mail form div p:hover {
+      padding: 0 0 3% 0;
+      color: #606060; }
+    #mail form div input {
+      border: none;
+      background: none;
+      color: white; }
+    #mail form div input:focus {
+      outline: none; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+/*---------------------------------------------MIXINS-----------------------------------------------*/
+
+@mixin linkState($unactiveColor, $activeColor) { 
+	a:link    { color: $unactiveColor; text-decoration: none; }
+ 	a:visited { color: $unactiveColor; text-decoration: none; }
+ 	a:hover   { color: $activeColor; text-decoration: none; }
+ 	a:active  { color: $activeColor; text-decoration: none; }
+}
+
+@mixin borderRadius($borderRadius) {
+	 -webkit-border-radius: $borderRadius;
+	 -moz-border-radius: $borderRadius;
+	 -o-border-radius: $borderRadius;
+	 border-radius:$borderRadius;
+}
+
+@mixin transition($transionType, $transitionTime) {
+	-webkit-transition: $transionType $transitionTime;
+	 -moz-transition:$transionType $transitionTime;
+	 -o-transition:$transionType $transitionTime;
+	 transition:$transionType $transitionTime;
+}

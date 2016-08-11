@@ -1,0 +1,175 @@
+/*--------------------------------------------LAYOUT-----------------------------------------------*/
+
+#page {
+
+	width: 1170px;
+	margin: auto;
+	
+	@media all and (max-width: $screenL + 1) {
+		width: 100%;
+	}
+	header {
+		width: 100%;
+		box-sizing: border-box;
+		
+		h1 {
+			display: inline-block;
+			width: 25%;
+			@media all and (max-width: $screenL + 1) {
+				display: block;
+				margin: auto;
+				width: 50%;
+			}
+		}
+		
+		ul {
+			display: inline-block;
+			width: 72%;
+			@media all and (max-width: $screenL + 1) {
+			width: 100%;
+			}
+			@media all and (max-width: $screenS + 1){
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				height: 100%;
+				width: 10px;
+				overflow: hidden;
+				background-color: $textColorAccent;
+				
+				&:hover {
+					width: 80%;
+				}
+				
+			}
+			li {
+				margin: 20px;
+				display: inline;
+				@media all and (max-width: $screenM + 1){
+					display: block;
+				}
+			}		
+		}
+		
+	}
+}
+
+nav{
+	width: 100%;
+	
+	ul {
+	
+		li {
+			display: inline;
+			margin: 0 20px;
+			@media all and (max-width: $screenL + 1) {
+			display: block;
+			padding: $paddingS/2;
+			}
+		}
+	}
+}
+#gallery {
+	width: 100%;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+	
+}
+
+#radio {
+	width: 100%;
+	
+	#radio-search {
+		column-count: 3;
+		margin: $marginS $marginXL;
+		@media all and (max-width: $screenL + 1) {
+			column-count: 2;
+		}
+	}
+}
+
+.btn{
+	width: 200px; 
+
+	display: block;
+	margin: $marginS auto;
+}
+#movie-gallery{
+	display: inline-block;
+	
+	.movies{
+		float: left;
+		margin: 2.5%;
+		width:200px;
+		height: 300px;
+		overflow: hidden;
+		@media all and (max-width: $screenL + 1) {
+			width: 40%;
+			height: 60%;
+			margin: $marginM;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			@include transition(width, 1000ms);
+		}
+		img:hover {
+			width: 105%;
+		}
+	}
+}
+
+#carosel {
+	width: 100%;
+	img{
+		display: block;
+		width: 50%;
+		margin: auto;
+	}
+}
+#mail {
+	width: 100%;
+	display: inline-block;
+	
+	form{
+		width:90%;
+		font-weight:light;
+		
+		div {
+			width: 40%;
+			float: left;
+			margin: 5%;
+				@media all and (max-width: $screenM + 1){
+				width: 100%;
+			}
+		}
+		#div-opinion {
+		width: 90%;
+		
+			textarea{
+				width:85%;
+				float: right;
+			}
+		}
+		
+		input{
+			width: 70%;
+		}
+		
+	}
+	
+}
+
+#map{
+	width: 100%;
+	height:500px;
+	overflow:hidden;
+	
+	iframe{
+		height:100%;
+		width:100%;
+	}
+}
